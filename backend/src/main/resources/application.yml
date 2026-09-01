@@ -1,0 +1,50 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: faculty-credential-system
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/faculty_credential_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 15MB
+
+app:
+  jwt:
+    # Base64-encoded secret. Override via APP_JWT_SECRET env var in real deployments.
+    secret: ${APP_JWT_SECRET:c2VjdXJlLWRldi1vbmx5LWp3dC1zZWNyZXQtY2hhbmdlLW1lLWluLXByb2R1Y3Rpb24tMzItYnl0ZXM=}
+    expiration-ms: 86400000 # 24 hours
+  file:
+    upload-dir: ${APP_UPLOAD_DIR:uploads}
+    allowed-extensions: pdf,jpg,jpeg,png
+    max-file-size-bytes: 10485760
+  cors:
+    allowed-origins: http://localhost:5173
+  admin:
+    seed:
+      enabled: ${APP_ADMIN_SEED_ENABLED:true}
+      name: ${APP_ADMIN_NAME:System Administrator}
+      email: ${APP_ADMIN_EMAIL:admin@faculty-system.local}
+      password: ${APP_ADMIN_PASSWORD:ChangeMe123!}
+
+logging:
+  level:
+    com.example.faculty: INFO

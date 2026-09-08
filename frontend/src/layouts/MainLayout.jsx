@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
@@ -79,6 +80,15 @@ export default function MainLayout() {
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-6">
         <Outlet />
       </main>
+=======
+import Navbar from '../components/Navbar'
+
+export default function MainLayout({ children }) {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <main className="max-w-6xl mx-auto px-4 py-6">{children}</main>
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
     </div>
   )
 }

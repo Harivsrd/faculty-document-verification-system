@@ -2,6 +2,7 @@ package com.example.faculty.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+<<<<<<< HEAD
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,3 +17,10 @@ public class LoginRequest {
     @NotBlank(message = "Password is required")
     private String password;
 }
+=======
+
+public record LoginRequest(
+        @NotBlank @Email String email,
+        @NotBlank String password
+) {}
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3

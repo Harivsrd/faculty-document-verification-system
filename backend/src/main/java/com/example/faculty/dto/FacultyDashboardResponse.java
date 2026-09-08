@@ -1,5 +1,6 @@
 package com.example.faculty.dto;
 
+<<<<<<< HEAD
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,3 +18,13 @@ public class FacultyDashboardResponse {
     private long pendingDocuments;
     private long rejectedDocuments;
 }
+=======
+public record FacultyDashboardResponse(
+        int profileCompletionPercent,
+        long educationCount,
+        long experienceCount,
+        long approvedDocuments,
+        long pendingDocuments,
+        long rejectedDocuments
+) {}
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3

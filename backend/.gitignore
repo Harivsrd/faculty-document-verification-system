@@ -1,15 +1,34 @@
+<<<<<<< HEAD
+=======
+HELP.md
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+<<<<<<< HEAD
 *.class
 
 .idea/
+=======
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
 *.iws
 *.iml
 *.ipr
 
+<<<<<<< HEAD
 .vscode/
 
 .DS_Store
@@ -18,4 +37,19 @@ uploads/
 
 *.log
 
+=======
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# Uploaded certificate files must never be committed
+uploads/
+*.log
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
 .env

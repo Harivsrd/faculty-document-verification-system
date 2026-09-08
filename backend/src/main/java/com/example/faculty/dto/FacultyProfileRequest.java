@@ -1,5 +1,6 @@
 package com.example.faculty.dto;
 
+<<<<<<< HEAD
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,3 +32,19 @@ public class FacultyProfileRequest {
 
     private String department;
 }
+=======
+import java.time.LocalDate;
+
+public record FacultyProfileRequest(
+        String fullName,
+        String phone,
+        LocalDate dateOfBirth,
+        String gender,
+        String address,
+        String city,
+        String state,
+        String specialization,
+        String department,
+        Boolean publiclyVisible
+) {}
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3

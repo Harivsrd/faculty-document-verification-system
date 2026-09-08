@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+<<<<<<< HEAD
 public interface AuditLogRepository extends JpaRepository<AuditLog, Long> {
 
     @Query("""
@@ -25,3 +26,23 @@ public interface AuditLogRepository extends JpaRepository<AuditLog, Long> {
             Pageable pageable
     );
 }
+=======
+import java.time.LocalDateTime;
+
+public interface AuditLogRepository extends JpaRepository<AuditLog, Long> {
+
+    @Query("""
+           SELECT a FROM AuditLog a
+           WHERE (:action IS NULL OR a.action = :action)
+           AND (:userId IS NULL OR a.user.id = :userId)
+           AND (:from IS NULL OR a.timestamp >= :from)
+           AND (:to IS NULL OR a.timestamp <= :to)
+           ORDER BY a.timestamp DESC
+           """)
+    Page<AuditLog> filter(@Param("action") AuditAction action,
+                           @Param("userId") Long userId,
+                           @Param("from") LocalDateTime from,
+                           @Param("to") LocalDateTime to,
+                           Pageable pageable);
+}
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3

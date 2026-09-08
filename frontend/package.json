@@ -7,13 +7,21 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+<<<<<<< HEAD
     "lint": "eslint src"
+=======
+    "lint": "eslint ."
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
   },
   "dependencies": {
     "axios": "^1.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+<<<<<<< HEAD
     "react-router-dom": "^6.24.1"
+=======
+    "react-router-dom": "^6.24.0"
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
@@ -21,10 +29,19 @@
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
+<<<<<<< HEAD
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.3"
+=======
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "vite": "^5.3.1"
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
   }
 }

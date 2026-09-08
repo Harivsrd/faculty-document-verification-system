@@ -3,6 +3,10 @@ package com.example.faculty.entity;
 public enum AuditAction {
     LOGIN,
     LOGOUT,
+<<<<<<< HEAD
+=======
+    REGISTER,
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
     CREATE_PROFILE,
     UPDATE_PROFILE,
     ADD_EDUCATION,

@@ -6,6 +6,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+<<<<<<< HEAD
+=======
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -28,6 +33,7 @@ public class FacultyProfile {
     private User user;
 
     private String fullName;
+<<<<<<< HEAD
 
     private String phone;
 
@@ -63,4 +69,27 @@ public class FacultyProfile {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+=======
+    private String phone;
+    private LocalDate dateOfBirth;
+    private String gender;
+    private String address;
+    private String city;
+    private String state;
+    private String specialization;
+    private String department;
+    private String profilePhoto;
+
+    /** Whether this profile is publicly listable in the approved faculty directory. */
+    @Builder.Default
+    @Column(nullable = false)
+    private boolean publiclyVisible = false;
+
+    @CreationTimestamp
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
 }

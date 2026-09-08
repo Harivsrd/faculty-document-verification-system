@@ -16,11 +16,18 @@
     <version>1.0.0</version>
     <name>faculty-credential-system</name>
     <description>Faculty Credential and Document Verification System</description>
+<<<<<<< HEAD
+=======
+    <packaging>jar</packaging>
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
 
     <properties>
         <java.version>17</java.version>
         <jjwt.version>0.12.5</jjwt.version>
+<<<<<<< HEAD
         <lombok.version>1.18.34</lombok.version>
+=======
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
     </properties>
 
     <dependencies>
@@ -69,7 +76,10 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+<<<<<<< HEAD
             <version>${lombok.version}</version>
+=======
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
             <optional>true</optional>
         </dependency>
 
@@ -87,6 +97,7 @@
 
     <build>
         <plugins>
+<<<<<<< HEAD
             <!--
                 Lombok generates getters/setters/builders/constructors at
                 compile time via annotation processing. Some Maven/JDK
@@ -110,6 +121,8 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+=======
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

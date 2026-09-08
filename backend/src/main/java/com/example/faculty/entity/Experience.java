@@ -6,6 +6,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+<<<<<<< HEAD
+=======
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -26,6 +31,7 @@ public class Experience {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
+<<<<<<< HEAD
     @JoinColumn(name = "faculty_id", nullable = false)
     private FacultyProfile faculty;
 
@@ -40,16 +46,30 @@ public class Experience {
     @Column(nullable = false)
     private LocalDate startDate;
 
+=======
+    @JoinColumn(name = "faculty_profile_id", nullable = false)
+    private FacultyProfile faculty;
+
+    private String organization;
+    private String designation;
+    private String department;
+    private LocalDate startDate;
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
     private LocalDate endDate;
 
     @Builder.Default
     private boolean currentlyWorking = false;
 
+<<<<<<< HEAD
     @Column(length = 1000)
+=======
+    @Column(length = 2000)
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
     private String description;
 
     @OneToMany(mappedBy = "experience", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
+<<<<<<< HEAD
     private List<Document> documents = new ArrayList<>();
 
     @Column(updatable = false)
@@ -67,4 +87,14 @@ public class Experience {
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }
+=======
+    private List<Document> certificateDocuments = new ArrayList<>();
+
+    @CreationTimestamp
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
+>>>>>>> b100b436eab738f8f9eca6812bdd01701ec097b3
 }
